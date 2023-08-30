@@ -1,0 +1,40 @@
+.city_name{
+    font-weight: bold;
+    color: rgb(173, 196, 206);
+    margin-top: 50px;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    text-align: center;
+    width: 10%; 
+    border: 5px solid rgb(238, 224, 201);
+    margin-left: 45%;
+    background-color: white;
+}
+
+.buttons{
+    font-size: large;
+    margin-bottom: 15px;
+    width: 5%; 
+    border: 5px solid rgb(173, 196, 206);
+    margin-left: 680px;
+    background-color: rgb(173, 196, 206);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tick_button{
+    margin-left: 820px;
+    margin-top: -26px;
+}
+
+.country_button{
+    font-style: italics;
+    font-family: Haettenschweiler, 'Arial', sans-serif;
+    font-size: large;
+    color: rgb(173, 196, 206);
+    margin-top: 60px;
+    width: 9%;
+    border: 5px solid rgb(244, 238, 238);
+    margin-left: 660px;
+    background-color: white;
+}

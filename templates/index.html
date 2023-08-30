@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+<div class="welcome">
+ Welcome to your Travel Bucket List!
+ </div>
+ <div class="click">
+ Click the button below to see all countries!
+ </div>
+ <div class="button">
+    <nav>
+        <ul class="menu">
+            <li><a href="/countries">Confirm</a></li>
+        </ul>
+    </nav>
+</div>
+
+{% endblock content %}

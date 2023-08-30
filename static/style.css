@@ -1,0 +1,22 @@
+.bucketlist_title{
+    color: rgb(150, 182, 197);
+    font-weight: bold;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    width: 20%; 
+    border: 5px solid rgb(244, 238, 238);
+    margin-left: 580px;
+    background-color: white;
+}
+
+
+.base_body{
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://marketplace.canva.com/EAFJebotzdY/1/0/1600w/canva-beige-floral-minimalist-linktree-background-Jr6vl3hxUDw.jpg);
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+}

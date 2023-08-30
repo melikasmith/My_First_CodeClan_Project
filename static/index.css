@@ -1,0 +1,27 @@
+.welcome{
+    font-style: italics;
+    font-family: Haettenschweiler, 'Arial', sans-serif;
+    font-size: large;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.click{
+    font-style: italics;
+    font-family: Haettenschweiler, 'Arial', sans-serif;
+    font-size: large;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.button{
+    font-style: italics;
+    font-family: Haettenschweiler, 'Arial', sans-serif;
+    font-size: large;
+    color: rgb(173, 196, 206);
+    margin-top: 40px;
+    width: 9%; 
+    border: 5px solid rgb(244, 238, 238);
+    margin-left: 660px;
+    background-color: white;
+}

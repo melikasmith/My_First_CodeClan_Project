@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<header class="title">
+    Countries
+    <link rel="stylesheet" href="{{ url_for('static', filename='countries.css') }}">
+</header>
+<div class="top_country">
+    {% for country in countries %}
+    <div class="Countries">
+    <a href="/countries/{{country.id}}">{{country.name}}</a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

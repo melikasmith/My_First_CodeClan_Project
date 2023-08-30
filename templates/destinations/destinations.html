@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<header>
+    Destinations
+</header>
+{% for destination in all_destinations %}
+<div class="Destinations">
+    <a href="/countries/{{destination.country.id}}">{{destination.country}}</a>
+    <p>{{destination.city}}</p>
+</div>
+{% endfor %}
+{% endblock content %}

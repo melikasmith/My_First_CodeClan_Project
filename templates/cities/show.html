@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<header class="city_name">
+    {{city.name}}
+    <link rel="stylesheet" href="{{ url_for('static', filename='one_city.css') }}">
+</header>
+
+
+{% if city.visited==0 %}
+<form class="tick" action="/cities/{{city.id}}/visited">
+    <div class="buttons">
+        <button class="visited">Visited?</button>
+    </div>
+</form>
+{% endif %}
+{% if city.visited == True %}
+<div class="tick_button"
+<span>&#9989;</span>
+</div>
+{% endif %}
+
+<div class="country_button">
+<nav>
+    <ul>
+        <li><a href="/countries">Countries</a></li>
+    </ul>
+</nav>
+</div>
+
+{% endblock content %}
