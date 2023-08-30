@@ -6,8 +6,8 @@ from models.city import City
 import repositories.country_repository as country_repository
 
 def save(city):
-    sql = "INSERT INTO cities (name, visited, country_id) VALUES (%s, %s, %s) RETURNING *"
-    values = [city.name, city.visited, city.country.id]
+    sql = "INSERT INTO cities (name, visited, want_to_visit, country_id) VALUES (%s, %s, %s, %s) RETURNING *"
+    values = [city.name, city.visited, city.want_to_visit, city.country.id]
     results = run_sql(sql, values)
     #if len(results > 0):
     id = results[0]['id']
@@ -22,7 +22,7 @@ def select_all():
 
     for row in results:
         country = country_repository.select(row['country_id'])
-        city = City(row['name'], row['visited'], country, row['id'])
+        city = City(row['name'], row['visited'], row['want_to_visit'], country, row['id'])
         cities.append(city)
     return cities
 
@@ -35,7 +35,7 @@ def select(id):
     if results:
         result = results[0]
         country = country_repository.select(result['country_id'])
-        city = City(result['name'], result['visited'], country, result['id'])
+        city = City(result['name'], result['visited'], result['want_to_visit'], country, result['id'])
         return city
     
 def delete_all():
@@ -49,8 +49,8 @@ def delete(id):
     run_sql(sql, values)
 
 def update(city):
-    sql = "UPDATE cities SET (name, visited, country_id) = (%s, %s, %s) WHERE id = %s"
-    values = [city.name, city.visited, city.country.id, city.id]
+    sql = "UPDATE cities SET (name, visited, want_to_visit, country_id) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [city.name, city.visited, city.want_to_visit, city.country.id, city.id]
     run_sql(sql, values)
 
 
@@ -63,6 +63,6 @@ def select_cities_by_country(country):
 
     for row in results:
         country = country_repository.select(row['country_id'])
-        city = City(row['name'], row['visited'],country,row['id'] )
+        city = City(row['name'], row['visited'], row['want_to_visit'], country,row['id'] )
         cities.append(city)
     return cities

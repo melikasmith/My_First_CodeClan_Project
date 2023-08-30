@@ -23,5 +23,6 @@ CREATE TABLE cities (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     visited BOOLEAN,
+    want_to_visit BOOLEAN,
     country_id INT NOT NULL REFERENCES countries(id)
 );

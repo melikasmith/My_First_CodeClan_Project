@@ -14,8 +14,21 @@
 </form>
 {% endif %}
 {% if city.visited == True %}
-<div class="tick_button"
+<div class="tick_button">
 <span>&#9989;</span>
+</div>
+{% endif %}
+
+{% if city.want_to_visit==0 %}
+<form class="cross" action="/cities/{{city.id}}/want_to_visit">
+    <div class="button">
+        <button class="want_to_visit">Want To Visit</button>
+    </div>
+</form>
+{% endif %}
+{% if city.want_to_visit==True %}
+<div class="cross_button">
+<span>&#10062;</span>
 </div>
 {% endif %}
 
