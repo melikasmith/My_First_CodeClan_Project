@@ -23,3 +23,10 @@ def visited_city(id):
     city.visited = True
     city_repository.update(city)
     return redirect('/cities/'+ id)
+
+@cities_blueprint.route("/cities/<id>/want_to_visit")
+def want_to_visit_city(id):
+    city = city_repository.select(id)
+    city.want_to_visit = True
+    city_repository.update(city)
+    return redirect('/cities/'+ id)
